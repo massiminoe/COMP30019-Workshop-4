@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Write your code to fire a projectile here...
+            var rotation = Quaternion.AngleAxis(90, new Vector3(1.0f, 0, 0));
+            Instantiate(projectilePrefab, transform.position, rotation);
         }
     }
 }
